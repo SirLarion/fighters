@@ -457,8 +457,8 @@ void printHelp() {
   printf("\
           Add character:      A {NAME} {HP} {WEAPON} {MAXDMG}\n\
           Attack character:   H {ATTACKERNAME} {DEFENDERNAME}\n\
-          Save into file:     W {FILENAME}\n\
-          Load from file:     O {FILENAME}\n\
+          Write into file:    W {FILENAME}\n\
+          Read from file:     R {FILENAME}\n\
           Print characters:   L\n\
           Print help:         ?\n\
           Close program:      Q\n");
