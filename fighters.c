@@ -587,10 +587,12 @@ void processCommand(Fight* fight, char id){
   switch(tolower(id)) {
     case ' ':
       break;
+
     case '0':
       //Initial empty command
       printf("ANNOUNCER: \"Welcome everyone to the battle-arena!\"\n");
       break;
+
     case 'a':
       //Jump to addCharacter if all parameters have been initialised
       if(cmd.init == 0xF){
@@ -602,6 +604,7 @@ void processCommand(Fight* fight, char id){
         printf("(Syntax: A {NAME} {HP} {WEAPON} {MAXDMG})\n");
       }
       break;
+
     case 'h':
       //Jump to attackCharacter if at least both string parameters have been initialised
       if(cmd.init >= 0xA){
@@ -612,10 +615,12 @@ void processCommand(Fight* fight, char id){
         printf("(Syntax: H {ATTACKERNAME} {DEFENDERNAME})\n");
       }
       break;
+
     case 'l':
       //Jump to printALl
       printAll(fight);
       break;
+
     case 'w':
       //Jump to saveFight if at least the first string parameter has been initialised
       if(cmd.init >= 0x8){
@@ -627,7 +632,8 @@ void processCommand(Fight* fight, char id){
         }
       }
       break;
-    case 'o':
+
+    case 'r':
       //Jump to saveFight if at least the first string parameter has been initialised
       if(cmd.init >= 0x8){
         if(loadFight(fight, cmd.str1)){
@@ -639,10 +645,12 @@ void processCommand(Fight* fight, char id){
         }
       }
       break;
+
     case '?':
       //Print help message
       printHelp();
       break;
+
     default:
       //Every other identifier is disregarded
       printf("ANNOUNCER: \"I don't quite understand what you meant with that\"\n");
